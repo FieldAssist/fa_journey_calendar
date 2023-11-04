@@ -1,7 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.FAJourneyCalendar = void 0;
-class FAJourneyCalendar {
+exports.JourneyCalendar = void 0;
+class JourneyCalendar {
     _getCurrentJourneyCalendarDetail() {
         var _a, _b;
         const currentDate = this._currentDateTime;
@@ -214,4 +214,4 @@ class FAJourneyCalendar {
         return this.journeyCalendar;
     }
 }
-exports.FAJourneyCalendar = FAJourneyCalendar;
+exports.JourneyCalendar = JourneyCalendar;

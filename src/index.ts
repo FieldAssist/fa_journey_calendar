@@ -1,6 +1,6 @@
 import { JourneyYear, JourneyCycle, JourneyWeek } from "./types";
 
-export class FAJourneyCalendar {
+export class JourneyCalendar {
   private readonly _currentDateTime: Date = new Date();
 
   public readonly journeyCalendar: JourneyYear[];

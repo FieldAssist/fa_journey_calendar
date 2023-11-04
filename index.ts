@@ -1,4 +1,9 @@
-import { FAJourneyCalendar } from "./src";
+import { JourneyCalendar } from "./src";
 import { JourneyYear, JourneyCycle, JourneyWeek } from "./src/types";
 
-export { FAJourneyCalendar, JourneyYear, JourneyCycle, JourneyWeek };
+export {
+  JourneyCalendar,
+  JourneyYear,
+  JourneyCycle,
+  JourneyWeek,
+};
