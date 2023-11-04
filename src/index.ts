@@ -24,6 +24,12 @@ export class JourneyCalendar {
   public readonly lastJourneyWeek: JourneyWeek | undefined;
   public readonly lastJourneyWeekIndex: number | undefined;
 
+  /**
+   * _getCurrentJourneyCalendarDetail()
+   * This function finds the current journey calendar based on the current date and time.
+   * It also returns the index of the current journey calendar in the journeyCalendar array and the names of all journey cycles in the current journey calendar.
+   * @returns {Object} - An object containing the current journey calendar, its index, and the names of its journey cycles.
+   */
   private _getCurrentJourneyCalendarDetail() {
     const currentDate = this._currentDateTime;
 
@@ -53,6 +59,12 @@ export class JourneyCalendar {
     };
   }
 
+  /**
+   * _getLastJourneyCalendarDetail()
+   * This function finds the last journey calendar based on the current journey calendar index.
+   * It also returns the index of the last journey calendar in the journeyCalendar array and the names of all journey cycles in the last journey calendar.
+   * @returns {Object} - An object containing the last journey calendar, its index, and the names of its journey cycles.
+   */
   private _getLastJourneyCalendarDetail() {
     if (!this.currentJourneyCalendarIndex) {
       return {
@@ -76,6 +88,12 @@ export class JourneyCalendar {
     };
   }
 
+  /**
+   * _getCurrentJourneyCycleDetail()
+   * This function finds the current journey cycle based on the current date and time.
+   * It also returns the index of the current journey cycle in the journeyCycles array of the current journey calendar.
+   * @returns {Object} - An object containing the current journey cycle and its index.
+   */
   private _getCurrentJourneyCycleDetail() {
     const currentDate = this._currentDateTime;
 
@@ -108,6 +126,12 @@ export class JourneyCalendar {
     };
   }
 
+  /**
+   * _getLastJourneyCycleDetail()
+   * This function finds the last journey cycle based on the current journey cycle index.
+   * It also returns the index of the last journey cycle in the journeyCycles array of the current or last journey calendar.
+   * @returns {Object} - An object containing the last journey cycle and its index.
+   */
   private _getLastJourneyCycleDetail() {
     if (!this.currentJourneyCycleIndex) {
       return {
@@ -151,6 +175,12 @@ export class JourneyCalendar {
     };
   }
 
+  /**
+   * _getCurrentJourneyWeekDetail()
+   * This function finds the current journey week based on the current date and time.
+   * It also returns the index of the current journey week in the journeyWeeks array of the current journey cycle.
+   * @returns {Object} - An object containing the current journey week and its index.
+   */
   private _getCurrentJourneyWeekDetail() {
     const currentDate = this._currentDateTime;
 
@@ -183,6 +213,12 @@ export class JourneyCalendar {
     };
   }
 
+  /**
+   * _getLastJourneyWeekDetail()
+   * This function finds the last journey week based on the current journey week index.
+   * It also returns the index of the last journey week in the journeyWeeks array of the current or last journey cycle.
+   * @returns {Object} - An object containing the last journey week and its index.
+   */
   private _getLastJourneyWeekDetail() {
     if (!this.currentJourneyWeekIndex) {
       return {
@@ -226,6 +262,13 @@ export class JourneyCalendar {
     };
   }
 
+  /**
+   * _sanitizeJourneyCalendarData(data: JourneyYear[])
+   * This function takes an array of JourneyYear objects and sanitizes the data.
+   * It sets the start and end dates of each journey, journey cycle, and journey week to the start and end of the day respectively.
+   * @param {JourneyYear[]} data - The journey calendar data to be sanitized.
+   * @returns {JourneyYear[]} - The sanitized journey calendar data.
+   */
   private _sanitizeJourneyCalendarData(data: JourneyYear[]) {
     const sanitizedJourneyCalendarData = data.map((journeyCalendar) => {
       const journeyCalendarStartDate = new Date(journeyCalendar.startDate);
@@ -319,6 +362,11 @@ export class JourneyCalendar {
     this.lastJourneyWeekIndex = lastJourneyWeekDetail.lastJourneyWeekIndex;
   }
 
+  /**
+   * getCurrentJourneyCalendar()
+   * This function returns the current journey calendar.
+   * @returns {JourneyYear} - The current journey calendar.
+   */
   public getJourneyCalendar(): JourneyYear[] {
     return this.journeyCalendar;
   }
