@@ -1,0 +1,12 @@
+{
+  "name": "fa_journey_calender",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc --watch"
+  },
+  "keywords": [],
+  "author": "Neeraj Kumar",
+  "license": "ISC"
+}
