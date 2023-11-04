@@ -263,3 +263,4 @@ class JourneyCalendar {
     }
 }
 exports.JourneyCalendar = JourneyCalendar;
+//# sourceMappingURL=index.js.map
